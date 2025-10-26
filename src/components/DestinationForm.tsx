@@ -11,8 +11,8 @@ type Destination = {
 type Props = {
     onAdd: (newDestination: Omit<Destination, "id">) => void;
     editing?: Destination | null;
-    onCancel?: () => void;
-    onUpdate?: (updated: Destination, deleteImage: boolean) => void;//画像削除１：第二引数に
+    onCancel: () => void;
+    onUpdate: (updated: Destination, deleteImage: boolean) => void;//画像削除１：第二引数に
 };
 
 export default function DestinationForm({ onAdd, editing, onUpdate, onCancel }: Props) {
